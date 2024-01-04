@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aggiungi Utente</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 50px;
+        }
+
+        input {
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aggiungi Utente</h1>
+    <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" placeholder="Inserisci l'username">
+
+        <br>
+
+        <label for="password">Password:</label>
+        <input type="text" id="password" placeholder="Inserisci la password">
+
+        <br>
+
+        <button type="button" onclick="aggiungiUtente()">Salva</button>
+    </form>
+
+    <script src="aggiungiUtenteScript.js"></script>
+</body>
+</html>

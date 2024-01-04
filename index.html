@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Applicazione</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Aggiungi un file CSS esterno per lo stile -->
+    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             display: flex;
@@ -40,27 +40,41 @@
 </head>
 <body>
     <h1>Applicazione</h1>
+    <button onclick="window.location.href='elencoUtenti.html'">Elenco utenti</button>
+
     <section class="icon-section">
         <div class="icon">
-            <img src="./img/icons/checklist.gif" alt="Checklist">
+            <a href="./elencoAttivita.html">
+            <img src="./img/icons/checklist.gif" alt="Checklist"></a>
+            Gestione delle Attività
         </div>
         <div class="icon">
             <img src="./img/icons/notebook.gif" alt="Notebook">
+            Gestione progetti
         </div>
         <div class="icon">
             <img src="./img/icons/calendar.gif" alt="Calendar">
+            Calendario condiviso
         </div>
     </section>
     <section class="icon-section">
         <div class="icon">
             <img src="./img/icons/shopping-cart.gif" alt="Shopping Cart">
+            E-Commerce
         </div>
         <div class="icon">
             <img src="./img/icons/save-money.gif" alt="Save Money">
+            Gestione delle finanze personali
         </div>
         <div class="icon">
             <img src="./img/icons/complete.gif" alt="Complete">
+            Sistema di prenotazione
         </div>
     </section>
+
+    <script>
+        console.log(document.cookie);
+    </script>
+
 </body>
 </html>

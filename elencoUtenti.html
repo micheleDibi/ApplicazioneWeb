@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elenco utenti</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: #fff;
+        }
+
+        tbody tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        button {
+            display: block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <button id="addUserButton" onclick="window.location.href='aggiungiUtente.html'">Nuovo Utente</button>
+    <h1>Elenco utenti</h1>
+    <table id="user-table-root">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Password</th>
+                <th>Ultimo Login</th>
+                <th>Ultimo Logout</th>
+                <th>Modifica</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Le righe vengono aggiunte dinamicamente tramite JavaScript -->
+        </tbody>
+    </table>
+    <script src="elencoUtentiScript.js"></script>
+</body>
+</html>
