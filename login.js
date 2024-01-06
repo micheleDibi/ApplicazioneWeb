@@ -10,19 +10,27 @@ function login() {
 
         request.open("GET", "http://127.0.0.1:8000/sales_management/checkUserExist/?username=" + username + "&password=" + password, true)
         request.onload = function() {
-            var data = JSON.parse(this.response)
+            if (request.status === 200) {
+                var data = JSON.parse(this.response);
+        
+                if (data.length > 0) {
+                    var utente = data[0]; // Accedi al primo oggetto nell'array
 
-            console.log(data);
+                    var utente_id = utente.utente_id;
+        
+                    document.cookie = "utente_id=" + utente_id + "; path=/";
+                    window.location.href = "./index.html";
+                } else {
+                    alert("Nessun utente trovato.");
 
-            if(request.status == 200) {
-                console.log(data.utente_id);
-                var utente_id = data.utente_id
-
-                document.cookie = "utente_id=" + utente_id + "; path=/";
-
-                window.location.href = "./index.html"
+                    document.getElementById("password").value = "";
+                }
+            } else {
+                console.error("Errore nella richiesta. Stato: " + request.status);
             }
-        }
+        };
+        
+        
 
         request.send();
     }
